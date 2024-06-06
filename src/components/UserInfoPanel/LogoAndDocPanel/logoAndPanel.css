@@ -1,0 +1,18 @@
+.document-panel {
+  width: 290px;
+  height: 200;
+  margin: auto;
+  margin-right: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  background: #eeeeee;
+}
+
+.span-error-file {
+  margin-left: '8px';
+  color: '#e74c3c';
+}
+
+.add-pointer {
+  cursor: pointer;
+}

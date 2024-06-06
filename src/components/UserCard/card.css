@@ -1,0 +1,155 @@
+/* Card Design  */
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 1320px;
+  /* animation: fade-out 1.2s cubic-bezier(0.39, 0.575, 0.565, 1) both; */
+}
+
+.card {
+  position: relative !important;
+  align-items: center;
+  box-sizing: border-box;
+  max-width: fit-content;
+  min-width: 240px !important;
+  background: rgba(164, 164, 164, 0.15) !important;
+  border: 3px solid rgba(190, 169, 106, 0.6) !important;
+  border-radius: 20px !important;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  -webkit-animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in-fwd 0.6s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@keyframes fade-in-fwd {
+  0% {
+    -webkit-transform: translateZ(-80px);
+    transform: translateZ(-80px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}
+
+.card:not(:nth-child(5n)) {
+  margin-right: 30px;
+}
+.student-card-img {
+  width: 130px;
+  height: 130px;
+  padding: 3px;
+  object-fit: cover;
+  border: 3px solid #bfa353;
+  border-radius: 50%;
+  overflow: hidden;
+  transform: scaleX(-1);
+}
+
+.circle-image {
+  margin-top: 55px !important;
+  width: 130px;
+  height: 130px;
+  margin: 10px;
+  transform: scaleX(-1);
+}
+
+.card-title {
+  width: 150px;
+  height: auto;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #070707;
+  white-space: nowrap; /* Запрещаем перенос строк */
+  overflow: hidden; /* Скрываем все, что не помещается в области видимости */
+  text-overflow: ellipsis;
+}
+
+.list-group-item {
+  width: 200px;
+  height: 40px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  padding: auto;
+  background: rgba(0, 0, 0, 0) !important;
+  border: 3px solid rgba(190, 169, 106, 0.6) !;
+  white-space: nowrap; /* Запрещаем перенос строк */
+  overflow: hidden; /* Скрываем все, что не помещается в области видимости */
+  text-overflow: ellipsis;
+}
+
+.list-group-item span {
+  color: #9a7d16;
+}
+
+.btn-more {
+  width: 100px;
+  height: 30px;
+  background: rgba(190, 169, 106, 0.9);
+  border: 2px solid #ffffff;
+  border-radius: 15px;
+  margin: 8px;
+  padding: 0;
+  color: #fff;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  text-align: center;
+}
+
+.btn-more:hover {
+  background-color: gray;
+  transition: 0.2s;
+}
+
+.card-skeleton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: auto;
+  max-width: fit-content;
+  min-width: 240px;
+  height: auto;
+  background: rgba(145, 141, 141, 0.2);
+  border: 3px solid rgba(227, 226, 222, 0.6);
+  border-radius: 20px;
+  padding-top: 30px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.card-skeleton:not(:nth-child(5n)) {
+  margin-right: 30px;
+}
+
+.list-skeleton {
+  margin-top: 10px;
+  list-style: none;
+  padding: 0;
+  text-align: center; /* Центрирование по горизонтали */
+  display: flex; /* Использование flex-контейнера */
+  justify-content: center;
+  flex-direction: column;
+}
+
+.item-skeleton {
+  align-items: center;
+  width: 200px;
+  height: 40px;
+}
+
+

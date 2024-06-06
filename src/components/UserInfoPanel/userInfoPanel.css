@@ -1,0 +1,230 @@
+.logo-sejong-printer {
+  padding: 10px;
+  padding-bottom: 0;
+  width: 100%;
+}
+
+.logo-sejong-printer img {
+  width: 200px;
+  /* margin-bottom: 20px; */
+}
+.margin-div {
+  margin-bottom: 25px;
+}
+.circle-img-main {
+  display: flex;
+  align-items: center;
+  margin-right: 80px;
+  justify-content: center;
+}
+
+.printer-blank {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  background-color: #fff;
+}
+.info-printer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  width: 210mm;
+  height: auto;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+  fill: #fff;
+  filter: drop-shadow(28px 0px 50px rgba(0, 0, 0, 0.17));
+}
+
+.circle-img-printer {
+  margin-left: 50px;
+  padding: 5px;
+  height: 230px;
+  width: 230px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #bfa353;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.print-input {
+  border: 2px solid #eeeeee;
+  width: 280px;
+  height: 50px;
+  text-align: left;
+  background: #eeeeee;
+  border-radius: 8px;
+  padding-left: 20px;
+  margin-right: 40px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  outline: none;
+}
+
+.margin-end-less {
+  margin-right: 20px;
+}
+
+.label-printer {
+  display: block;
+  margin-bottom: 8px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #555555;
+}
+
+.printer-flag {
+  margin-top: 25px;
+  width: 40px;
+}
+
+.exit-printer {
+  margin: 20px;
+}
+
+.exit-printer svg {
+  color: #555555;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.exit-printer svg:hover {
+  transform: scale(1.5);
+}
+
+.find-div {
+  margin-bottom: 60px;
+}
+
+.printer-select-form-main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  width: 280px;
+  height: fit-content;
+  margin-top: 60px;
+  margin-right: 40px;
+  background-color: #fff;
+  fill: #fff;
+  border-radius: 5px;
+  filter: drop-shadow(28px 0px 50px rgba(0, 0, 0, 0.17));
+}
+
+.input-find-printer {
+  margin-top: 20px;
+}
+
+.find-printer-btn {
+  width: 150px;
+  border: 2px solid #eeeeee;
+  padding-left: 20px;
+  height: 40px;
+  text-align: left;
+  background: #fff;
+  /* border-radius: 8px; */
+  border-radius: 8px 6px 6px 8px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 21px;
+  outline: none;
+}
+
+.print-btn-printer {
+  margin-top: 40px;
+  height: 40px;
+  width: 100px;
+  margin: 10px;
+}
+
+.btn-secondary {
+  background-color: #bfa353;
+  border: none;
+}
+
+.btn-secondary a {
+  background-color: #bfa353;
+  border: none;
+  text-align: center;
+}
+
+.form-printer {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.error {
+  position: absolute;
+  top: 96%; /* Позиционирует сообщение под полем ввода */
+  left: 0;
+  color: #e74c3c;
+  font-size: 0.875em; /* Пример размера шрифта */
+  margin-top: 0.25em; /* Пример отступа сверху */
+}
+
+.errorSolid {
+  border: 2px solid #e74c3c;
+}
+
+::placeholder {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: #555555;
+}
+
+.list-buttons {
+  display: flex;
+  margin-top: 40px;
+}
+
+.my-button {
+  width: 100px;
+  height: 50px;
+  margin: 10px;
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.delete-icon-trash {
+  margin-top: 14px;
+  margin-left: 70px;
+  cursor: pointer;
+}
+
+@page {
+  size: A4; /* Размер страницы, например, A4 */
+  margin: 0.5cm;
+}
+
+@media print {
+  body {
+    background-color: #fff;
+  }
+
+  .info-printer {
+    width: 210mm;
+    height: 300mm;
+    filter: none;
+    border: 4px solid #bfa353;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+}
