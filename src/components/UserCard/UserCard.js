@@ -1,20 +1,27 @@
 import React from 'react';
 import imageUser from '../../assets/images/Female.png';
-// import { useDispatch } from 'react-redux';
-// import { setId } from '../store/action';
-
 import './card.css';
 
 const UserCard = ({
-  index,
-  name,
-  last_name,
+  id,
+  name_en,
+  last_name_en,
   phone,
   email,
   typeSelect = 'id',
-  typeSelectInfo = 'null',
+  typeSelectInfo = id,
   photo = imageUser,
 }) => {
+  // console.log(
+  //   id,
+  //   name_en,
+  //   last_name_en,
+  //   phone,
+  //   email,
+  //   (typeSelect = 'id'),
+  //   (typeSelectInfo = id),
+  //   (photo = imageUser),
+  // );
   let studentImg = photo;
   if (process.env.REACT_APP_IP) {
     studentImg = process.env.REACT_APP_IP + '/' + photo;
@@ -27,23 +34,22 @@ const UserCard = ({
   return (
     <div className="card">
       <div className="filter-search">
-        {typeSelect} : <span>{typeSelectInfo}</span>
+        {typeSelect} : <span>{id}</span>
       </div>
       <div className="circle-image">
         <img src={studentImg} className="student-card-img" alt="..." />
       </div>
       <h5 className="card-title">
-        {/* {name} {last_name} */} Nematov Muhammadjon
+        {name_en} {last_name_en}
       </h5>
       <ul className="list-group list-group-flush">
         <li className="list-group-item">
           <span>Phone: </span>
-          {/* {phone} */}
-          501010120
+          {phone}
         </li>
         <li className="list-group-item">
           <span>Email: </span>
-          {email}nematovmz2003@gmail.com
+          {email}
         </li>
       </ul>
       <button
