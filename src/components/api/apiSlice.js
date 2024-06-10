@@ -1,5 +1,8 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import { filtersChanged } from '../Navbar/SearchPanel/SearchPanelSlice';
+import {
+  setFilteredStudents,
+  setStudents,
+} from '../Navbar/SearchPanel/SearchPanelSlice';
 
 export const apiSlice = createApi({
   reducerPath: 'api',
@@ -11,7 +14,8 @@ export const apiSlice = createApi({
       onQueryStarted: async (arg, { dispatch, queryFulfilled }) => {
         try {
           const { data } = await queryFulfilled;
-          dispatch(filtersChanged(data)); // Сохраните студентов в Redux состоянии
+          dispatch(setFilteredStudents(data));
+          dispatch(setStudents(data));
         } catch (err) {
           console.error(err);
         }

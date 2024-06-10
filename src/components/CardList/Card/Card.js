@@ -1,40 +1,50 @@
-import React from 'react';
-import imageUser from '../../assets/images/Female.png';
+import { useSelector, useDispatch } from 'react-redux';
+import { setSelectedCardId } from './cardSlice';
+import imageUser from '../../../assets/images/Female.png';
+import { getOption } from '../../Navbar/SearchPanel/SearchPanelSlice';
+
 import './card.css';
 
-const UserCard = ({
+const Card = ({
   id,
   name_en,
   last_name_en,
   phone,
   email,
-  typeSelect = 'id',
-  typeSelectInfo = id,
+  student_group,
+  topik,
   photo = imageUser,
 }) => {
-  // console.log(
-  //   id,
-  //   name_en,
-  //   last_name_en,
-  //   phone,
-  //   email,
-  //   (typeSelect = 'id'),
-  //   (typeSelectInfo = id),
-  //   (photo = imageUser),
-  // );
+  const dispatch = useDispatch();
+
   let studentImg = photo;
   if (process.env.REACT_APP_IP) {
     studentImg = process.env.REACT_APP_IP + '/' + photo;
   }
 
-  if (typeSelect === 'student_group') {
-    typeSelect = 'group';
+  const option = useSelector(getOption);
+
+  let selectionType = 'id';
+  let selectionInfo = id;
+  switch (option) {
+    case 'student_group':
+      selectionType = 'group';
+      selectionInfo = student_group;
+      break;
+    case 'topik':
+      selectionType = 'topik';
+      selectionInfo = topik;
+      break;
+    default:
+      selectionType = 'id';
+      selectionInfo = id;
+      break;
   }
 
   return (
     <div className="card">
       <div className="filter-search">
-        {typeSelect} : <span>{id}</span>
+        {selectionType} : <span>{selectionInfo}</span>
       </div>
       <div className="circle-image">
         <img src={studentImg} className="student-card-img" alt="..." />
@@ -53,11 +63,9 @@ const UserCard = ({
         </li>
       </ul>
       <button
-        data-bs-toggle="modal"
-        data-bs-target="#exampleModal"
         className="btn-more"
         onClick={() => {
-          // dispatch(setId(index - 1));
+          dispatch(setSelectedCardId(id));
         }}
       >
         More
@@ -66,4 +74,4 @@ const UserCard = ({
   );
 };
 
-export default UserCard;
+export default Card;

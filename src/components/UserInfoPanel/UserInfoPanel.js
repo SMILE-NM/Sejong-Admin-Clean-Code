@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
+
+import { selectSelectedCardId } from '../CardList/Card/cardSlice';
+import { useSelector } from 'react-redux';
+
 import { useRef } from 'react';
 import { Formik, Form as FormFormik } from 'formik';
+
 import { useReactToPrint } from 'react-to-print';
 
 import { CloseButton, Button } from 'react-bootstrap';
-
 import { BsTrash3Fill } from 'react-icons/bs';
 
 import LogoAndDocPanel from './LogoAndDocPanel/LogoAndDocPanel';
@@ -20,6 +24,8 @@ import { US, KR, TJ, UserImage } from './images/index';
 import './userInfoPanel.css';
 
 const UserInfoPanel = () => {
+  const studentId = useSelector(selectSelectedCardId);
+  console.log(student);
   const [isReadOnly, setIsReadyOnly] = useState(true);
   const componentRef = useRef();
 

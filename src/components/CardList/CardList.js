@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 import { useGetStudentsQuery } from '../api/apiSlice';
 import { selectFilteredStudents } from '../Navbar/SearchPanel/SearchPanelSlice';
 
-import UserCard from '../UserCard/UserCard';
+import Card from './Card/Card';
 
 const CardList = () => {
   const { isLoading, isError } = useGetStudentsQuery();
@@ -17,7 +17,7 @@ const CardList = () => {
     }
 
     return arr.map(({ id, ...props }) => {
-      return <UserCard {...props} id={id} key={id} />;
+      return <Card {...props} id={id} key={id} />;
     });
   };
   const elements = renderStudentsList(filteredStudents);

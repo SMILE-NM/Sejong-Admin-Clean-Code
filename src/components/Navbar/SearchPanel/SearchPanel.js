@@ -1,21 +1,35 @@
 import { useGetStudentsQuery } from '../../api/apiSlice';
 import { useDispatch } from 'react-redux';
-import { filtersChanged } from './SearchPanelSlice';
+import { setFilteredStudents, setOption } from './SearchPanelSlice';
+import { useState } from 'react';
 
 const SearchPanel = () => {
+  const [selectedValue, setSelectedValue] = useState('name_en');
+
   const dispatch = useDispatch();
-  const { data: students, isError, isLoading } = useGetStudentsQuery();
+  const { data: students } = useGetStudentsQuery();
 
   const handleSearchChange = (e) => {
-    if (students) {
-      const searchTerm = e.target.value.toLowerCase();
+    const searchTerm = e.target.value.toLowerCase();
+
+    if (selectedValue === 'name_en') {
       const filtered = students.filter((student) =>
         (student.name_en + student.last_name_en)
           .toLowerCase()
           .includes(searchTerm),
       );
-      dispatch(filtersChanged(filtered));
+      dispatch(setFilteredStudents(filtered));
+    } else {
+      const filtered = students.filter((student) =>
+        student[selectedValue].toLowerCase().includes(searchTerm),
+      );
+      dispatch(setFilteredStudents(filtered));
     }
+  };
+
+  const handleSelectChange = (e) => {
+    setSelectedValue(e.target.value);
+    dispatch(setOption(e.target.value));
   };
 
   return (
@@ -33,8 +47,8 @@ const SearchPanel = () => {
       </div>
       <select
         className="search-select"
-        // value={select[0]}
-        // onChange={handleSelectChange}
+        value={selectedValue}
+        onChange={handleSelectChange}
       >
         <option value="id">id</option>
         <option value="topik">Topic lvl</option>
