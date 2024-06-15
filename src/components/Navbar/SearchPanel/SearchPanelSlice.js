@@ -12,9 +12,7 @@ const filtersSlice = createSlice({
   name: 'filterStudents',
   initialState,
   reducers: {
-    setStudents: (state, action) => {
-      state.students = action.payload;
-    },
+    setStudents: filtersAdapter.setAll,
     setFilteredStudents: (state, action) => {
       state.filteredStudents = action.payload;
     },
@@ -28,6 +26,9 @@ const { actions, reducer } = filtersSlice;
 
 export const { selectAll: selectAllStudents, selectById: selectStudentById } =
   filtersAdapter.getSelectors((state) => state.filterStudents);
+
+export const selectFilteredStudents = (state) =>
+  state.filterStudents.filteredStudents;
 
 export const getOption = (state) => state.filterStudents.option;
 

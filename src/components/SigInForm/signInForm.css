@@ -1,0 +1,217 @@
+@font-face {
+  font-family: 'Poppins';
+  src: url('../../assets/fonts/Poppins-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Poppins-Medium';
+  src: url('../../assets/fonts/Poppins-Medium.woff2') format('woff2');
+}
+
+html,
+body {
+  background-color: #f1f2f3;
+}
+
+.login-main {
+  height: 100vh;
+  background-color: #f1f2f3;
+}
+
+/***************** FORM *****************/
+.Main-form {
+  background-color: white;
+  border: 0px solid rgb(0, 0, 0);
+  margin: auto;
+
+  margin: 8% 35%;
+  border-radius: 30px;
+
+  box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.08);
+}
+
+/***************** FIRST*****************/
+.First {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Welcome {
+  margin-left: 30px;
+  margin-bottom: 40px;
+}
+
+#wel {
+  margin-bottom: -10px;
+  margin-top: 10px;
+}
+
+.Sign {
+  position: relative;
+  margin-right: 30px;
+  width: 50%;
+}
+
+.Sign h3 {
+  color: #a4a4a4;
+  margin-bottom: -10px;
+}
+
+#sign_up {
+  position: relative;
+  text-decoration: none;
+  color: #bea96a;
+}
+
+#sign_up:hover {
+  transition: 0.4s;
+  color: #808080;
+}
+
+/***************** USER-CLASS *****************/
+
+/* USERNAME */
+.UserClass {
+  text-align: center;
+  box-shadow: 0;
+  font-family: 'Poppins';
+}
+.UserClass p {
+  position: relative;
+  text-align: left;
+  left: 8%;
+  margin-bottom: 8px;
+  margin-top: 20px;
+
+  color: #000;
+  font-size: 18px;
+  font-family: 'Poppins-Medium';
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.UserClass input {
+  position: relative;
+  padding: 10px;
+  font-size: 16px;
+  width: 80%;
+
+  border-radius: 9px;
+  border: 1px solid #adadad;
+  background: #fff;
+
+  text-align: left;
+  font-family: 'Poppins';
+  font-style: normal;
+  outline: none;
+}
+
+.UserClass span {
+  position: absolute;
+  display: block;
+  right: 38%;
+  margin-top: 2px;
+  color: #ad3113;
+}
+
+.error-message {
+  position: absolute;
+  display: block;
+  right: 38%;
+  margin-top: 2px;
+  color: #ad3113;
+}
+
+.show-password-eye {
+  position: absolute;
+  margin-top: 14px;
+  margin-left: 10px;
+}
+
+/* .UserClass input::placeholder {
+  font-size: 18px;
+  justify-content: center;
+} */
+
+::placeholder {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  color: #555555;
+}
+
+.UserClass input:focus {
+  border: 1px solid #4285f4;
+}
+
+/***************** BUTTON *****************/
+.ButtonClass {
+  text-align: center;
+}
+
+.ButtonClass p {
+  color: #ad3113;
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+#SignButton {
+  color: white;
+  font-size: large;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding: 3% 30%;
+
+  border: none;
+  border-radius: 10px;
+  background: #bfa353;
+  box-shadow: 0px 4px 19px 0px rgba(119, 147, 65, 0.3);
+}
+
+#SignButton:hover {
+  transition: 0.4s;
+  background-color: #808080;
+}
+
+.sejongLogo {
+  position: absolute;
+  width: 70%;
+  top: 10%;
+  left: 30%;
+}
+
+#eye-icon {
+  position: absolute;
+  display: inline;
+  right: 38.5%;
+  margin-top: 18px;
+
+  color: #8e8e8e;
+  cursor: pointer;
+}
+
+.errorBorder {
+  border: 1px solid #e74c3c;
+}
+
+.database-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.bi-database-fill-exclamation {
+  width: 400px;
+  height: 400px;
+  color: #e74c3c;
+  margin-top: 20vh;
+}
+
+.database-main h1 {
+  margin-top: 40px;
+  font-weight: bold;
+}

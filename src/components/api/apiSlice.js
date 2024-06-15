@@ -6,7 +6,10 @@ import {
 
 export const apiSlice = createApi({
   reducerPath: 'api',
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:3001' }),
+  baseQuery: fetchBaseQuery({
+    baseUrl: 'http://localhost:3001',
+    // credentials: 'include',
+  }),
   tagTypes: ['Students'],
   endpoints: (builder) => ({
     getStudents: builder.query({
@@ -37,6 +40,14 @@ export const apiSlice = createApi({
       }),
       invalidatesTags: ['Students'],
     }),
+    updateStudent: builder.mutation({
+      query: ({ id, updatedStudent }) => ({
+        url: `/students/${id}`,
+        method: 'PUT',
+        body: updatedStudent,
+      }),
+      invalidatesTags: ['Students'],
+    }),
   }),
 });
 
@@ -44,4 +55,5 @@ export const {
   useGetStudentsQuery,
   useCreateStudentMutation,
   useDeleteStudentMutation,
+  useUpdateStudentMutation,
 } = apiSlice;

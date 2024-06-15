@@ -1,6 +1,7 @@
 import * as Yup from 'yup';
 
 const placeholders = {
+  id: '',
   name_en: 'Enter your name',
   last_name_en: 'Enter your last name',
   name_kr: 'Enter your name',
@@ -15,11 +16,11 @@ const placeholders = {
 };
 
 const MyInitialValues = {
-  first_name_en: '',
+  name_en: '',
   last_name_en: '',
-  first_name_kr: '',
+  name_kr: '',
   last_name_kr: '',
-  first_name_tj: '',
+  name_tj: '',
   last_name_tj: '',
   date_of_birth: '',
   address: '',
@@ -30,12 +31,13 @@ const MyInitialValues = {
   email: '',
   phone: '',
   topik: '',
-  group: '',
+  student_group: '',
   time: '',
+  money: '',
 };
 
 const MyValidationSchema = Yup.object({
-  first_name_en: Yup.string()
+  name_en: Yup.string()
     .matches(/^[A-Za-z]+$/i, {
       message: 'Only English letters are allowed',
       excludeEmptyString: false,
@@ -49,24 +51,24 @@ const MyValidationSchema = Yup.object({
     })
     .min(3, 'Minimum 3 letters')
     .required('Enter your last name in English'),
-  first_name_kr: Yup.string().matches(/^[가-힣]+$/i, {
+  name_kr: Yup.string().matches(/^[가-힣]+$/i, {
     message: '한글만 가능',
     excludeEmptyString: false,
   }),
-  last_name_kr: Yup.string().matches(/^[A-Za-z]+$/i, {
+  last_name_kr: Yup.string().matches(/^[가-힣]+$/i, {
     message: '한글만 가능',
     excludeEmptyString: false,
   }),
-  first_name_tj: Yup.string()
+  name_tj: Yup.string()
     .matches(/^(?!.*[ЦцЩщЬьЫы])[\u0400-\u04FF\s]+$/u, {
-      message: 'Танҳо ҳарфҳои тоҷикӣ иҷозат дода мешавад',
+      message: 'Танҳо ҳарфҳои тоҷикӣ',
       excludeEmptyString: false,
     })
     .min(3, 'На камтар аз 3 ҳарф')
     .required('Номи худро бо забони тоҷикӣ нависед'),
   last_name_tj: Yup.string()
     .matches(/^(?!.*[ЦцЩщЬьЫы])[\u0400-\u04FF\s]+$/u, {
-      message: 'Танҳо ҳарфҳои тоҷикӣ иҷозат дода мешавад',
+      message: 'Танҳо ҳарфҳои тоҷикӣ',
       excludeEmptyString: false,
     })
     .min(3, 'На камтар аз 3 ҳарф')
@@ -75,8 +77,8 @@ const MyValidationSchema = Yup.object({
     .min(3, 'Minimum 3 letters')
     .required('Enter your address in English'),
   postal_code: Yup.string()
-    .matches(/^\d{6}/, {
-      message: '',
+    .matches(/^\d{6}$/, {
+      message: 'Postal code incorrect',
       excludeEmptyString: false,
     })
     .required('Enter your postal code'),

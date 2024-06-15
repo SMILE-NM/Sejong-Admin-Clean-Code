@@ -1,7 +1,10 @@
+import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
+
 import { setSelectedCardId } from './cardSlice';
-import imageUser from '../../../assets/images/Female.png';
 import { getOption } from '../../Navbar/SearchPanel/SearchPanelSlice';
+
+import imageUser from '../../../assets/images/Female.png';
 
 import './card.css';
 
@@ -16,7 +19,7 @@ const Card = ({
   photo = imageUser,
 }) => {
   const dispatch = useDispatch();
-
+  const navigate = useNavigate();
   let studentImg = photo;
   if (process.env.REACT_APP_IP) {
     studentImg = process.env.REACT_APP_IP + '/' + photo;
@@ -66,6 +69,7 @@ const Card = ({
         className="btn-more"
         onClick={() => {
           dispatch(setSelectedCardId(id));
+          navigate('/student');
         }}
       >
         More

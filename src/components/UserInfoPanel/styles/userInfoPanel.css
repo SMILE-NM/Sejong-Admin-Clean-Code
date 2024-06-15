@@ -1,3 +1,8 @@
+
+
+.hide-panel-buttons {
+  visibility: hidden;
+}
 .logo-sejong-printer {
   padding: 10px;
   padding-bottom: 0;
@@ -148,17 +153,6 @@
   margin: 10px;
 }
 
-.btn-secondary {
-  background-color: #bfa353;
-  border: none;
-}
-
-.btn-secondary a {
-  background-color: #bfa353;
-  border: none;
-  text-align: center;
-}
-
 .form-printer {
   position: relative;
   margin-bottom: 10px;
@@ -181,7 +175,7 @@
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 16px !important;
   line-height: 21px;
   color: #555555;
 }
@@ -195,16 +189,15 @@
   width: 100px;
   height: 50px;
   margin: 10px;
-  font-family: 'Poppins';
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 21px;
 }
 
 .delete-icon-trash {
   margin-top: 14px;
-  margin-left: 70px;
+  margin-left: 25px;
   cursor: pointer;
+}
+.taj-text {
+  font-family: 'Montserrat' !important;
 }
 
 @page {

@@ -1,0 +1,7 @@
+/* styles.css */
+.centered-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Высота 100% от высоты viewport */
+}

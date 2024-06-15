@@ -1,4 +1,4 @@
 import AdminPage from './AdminPage/AdminPage';
 import UserInfoPage from './UserInfoPage/UserInfoPage';
-
-export { AdminPage, UserInfoPage };
+import LoginPage from './LoginPage/LoginPage';
+export { AdminPage, UserInfoPage, LoginPage };

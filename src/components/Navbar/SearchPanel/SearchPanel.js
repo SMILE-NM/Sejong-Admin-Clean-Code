@@ -33,7 +33,7 @@ const SearchPanel = () => {
   };
 
   return (
-    <div className="d-flex justify-content-center align-items-center flex-grow-1">
+    <div className="d-flex justify-content-center align-items-center flex-grow-1 mb-2">
       <div className="text-center">
         <h1 className="search-text">Search Students</h1>
         <input

@@ -19,7 +19,7 @@ const LogoAndDocPanel = ({ isReadOnly }) => {
 const Mode = ({ isReadOnly }) => {
   return isReadOnly ? (
     <div>
-      <Form.Label>Click to download file</Form.Label>
+      <Form.Label className="mb-3">Click to download file</Form.Label>
       <CheckFile url="1" textName="Passport Scan File" key={1} />
       <hr />
       <CheckFile url="1" textName="Checklist Scan File" key={2} />
@@ -57,6 +57,3 @@ const CheckFile = ({ url, textName, errorText = 'Not found file' }) => {
 };
 
 export default LogoAndDocPanel;
-{
-  /* <div className="document-panel">Hello world</div>; */
-}

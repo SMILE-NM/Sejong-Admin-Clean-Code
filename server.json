@@ -1,27 +1,7 @@
 {
   "students": [
     {
-      "id": 1,
-      "name_en": "Suhrob",
-      "last_name_en": "Sharifov",
-      "name_kr": "수흐롭",
-      "last_name_kr": "샤리포브",
-      "name_tj": "Суҳроб",
-      "last_name_tj": "Шарифов",
-      "date_of_birth": "2001-07-15",
-      "phone": "800187870",
-      "email": "tazumi46879.16@gmail.com",
-      "gender": "Male",
-      "married": "No",
-      "student_group": "1A",
-      "topik": "3 lvl",
-      "passport": "123456789",
-      "postal_code": "734000",
-      "time": "9:00",
-      "address": "South Korea st. Seoul"
-    },
-    {
-      "id": 2,
+      "id": "2",
       "name_en": "Alice",
       "last_name_en": "Johnson",
       "name_kr": "앨리스",
@@ -35,15 +15,16 @@
       "married": "No",
       "student_group": "2B",
       "topik": "2 lvl",
-      "passport": "987654321",
+      "passportID": "98765432",
       "postal_code": "123456",
       "time": "10:00",
-      "address": "123 Main St, Seoul"
+      "address": "123 Main St, Seoul",
+      "money": ""
     },
     {
-      "id": 3,
+      "id": "3",
       "name_en": "Bob",
-      "last_name_en": "Smith",
+      "last_name_en": "SmithNM",
       "name_kr": "밥",
       "last_name_kr": "스미스",
       "name_tj": "Боб",
@@ -55,13 +36,14 @@
       "married": "No",
       "student_group": "3C",
       "topik": "1 lvl",
-      "passport": "456789123",
+      "passportID": "45678912",
       "postal_code": "654321",
       "time": "11:00",
-      "address": "456 Oak St, Seoul"
+      "address": "456 Oak St, Seoul",
+      "money": ""
     },
     {
-      "id": 4,
+      "id": "4",
       "name_en": "Claire",
       "last_name_en": "Brown",
       "name_kr": "클레어",
@@ -75,13 +57,14 @@
       "married": "Yes",
       "student_group": "4D",
       "topik": "4 lvl",
-      "passport": "321654987",
+      "passportID": "32165498",
       "postal_code": "987654",
       "time": "12:00",
-      "address": "789 Pine St, Seoul"
+      "address": "789 Pine St, Seoul",
+      "money": ""
     },
     {
-      "id": 5,
+      "id": "5",
       "name_en": "David",
       "last_name_en": "Taylor",
       "name_kr": "데이비드",
@@ -95,13 +78,14 @@
       "married": "No",
       "student_group": "5E",
       "topik": "5 lvl",
-      "passport": "654987321",
+      "passportID": "65498732",
       "postal_code": "321654",
       "time": "13:00",
-      "address": "101 Maple St, Seoul"
+      "address": "101 Maple St, Seoul",
+      "money": ""
     },
     {
-      "id": 6,
+      "id": "6",
       "name_en": "Eve",
       "last_name_en": "Martinez",
       "name_kr": "이브",
@@ -115,13 +99,14 @@
       "married": "Yes",
       "student_group": "6F",
       "topik": "3 lvl",
-      "passport": "789321654",
+      "passportID": "78932165",
       "postal_code": "987321",
       "time": "14:00",
-      "address": "102 Elm St, Seoul"
+      "address": "102 Elm St, Seoul",
+      "money": ""
     },
     {
-      "id": 7,
+      "id": "7",
       "name_en": "Frank",
       "last_name_en": "Garcia",
       "name_kr": "프랭크",
@@ -135,13 +120,14 @@
       "married": "No",
       "student_group": "7G",
       "topik": "2 lvl",
-      "passport": "321789654",
+      "passportID": "32178965",
       "postal_code": "654987",
       "time": "15:00",
-      "address": "103 Cedar St, Seoul"
+      "address": "103 Cedar St, Seoul",
+      "money": ""
     },
     {
-      "id": 8,
+      "id": "8",
       "name_en": "Grace",
       "last_name_en": "Harris",
       "name_kr": "그레이스",
@@ -155,13 +141,14 @@
       "married": "No",
       "student_group": "8H",
       "topik": "1 lvl",
-      "passport": "654321789",
+      "passportID": "65432178",
       "postal_code": "321789",
       "time": "16:00",
-      "address": "104 Birch St, Seoul"
+      "address": "104 Birch St, Seoul",
+      "money": ""
     },
     {
-      "id": 9,
+      "id": "9",
       "name_en": "Henry",
       "last_name_en": "Lopez",
       "name_kr": "헨리",
@@ -175,13 +162,14 @@
       "married": "Yes",
       "student_group": "9I",
       "topik": "4 lvl",
-      "passport": "987123456",
+      "passportID": "98712345",
       "postal_code": "987123",
       "time": "17:00",
-      "address": "105 Chestnut St, Seoul"
+      "address": "105 Chestnut St, Seoul",
+      "money": ""
     },
     {
-      "id": 10,
+      "id": "10",
       "name_en": "Ivy",
       "last_name_en": "Wilson",
       "name_kr": "아이비",
@@ -195,13 +183,13 @@
       "married": "No",
       "student_group": "10J",
       "topik": "3 lvl",
-      "passport": "123789456",
+      "passportID": "12378945",
       "postal_code": "123987",
       "time": "18:00",
-      "address": "106 Willow St, Seoul"
+      "address": "106 Willow St, Seoul",
+      "money": ""
     }
   ],
-
   "groups": [
     {
       "name": "all",

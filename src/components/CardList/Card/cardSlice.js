@@ -1,10 +1,8 @@
-import { createSlice, createEntityAdapter } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 
-const cardsAdapter = createEntityAdapter();
-
-const initialState = cardsAdapter.getInitialState({
+const initialState = {
   selectedCardId: 1,
-});
+};
 
 const cardSlice = createSlice({
   name: 'card',
@@ -17,7 +15,7 @@ const cardSlice = createSlice({
 });
 
 const { actions, reducer } = cardSlice;
-export const selectSelectedCardId = (state) => state.filterStudents.option;
+export const selectSelectedCardId = (state) => state.card.selectedCardId;
 
 export default reducer;
 export const { setSelectedCardId } = actions;

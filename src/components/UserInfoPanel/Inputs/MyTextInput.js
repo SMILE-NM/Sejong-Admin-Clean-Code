@@ -1,6 +1,12 @@
 import { useField } from 'formik';
 
-const MyTextInput = ({ isReadOnly, inputWidth, label, ...props }) => {
+const MyTextInput = ({
+  isReadOnly,
+  inputWidth,
+  label,
+  classTajFont,
+  ...props
+}) => {
   const [field, meta] = useField(props);
   let errorClass = '';
   if (meta.touched && meta.error && !isReadOnly) {
@@ -14,12 +20,12 @@ const MyTextInput = ({ isReadOnly, inputWidth, label, ...props }) => {
       <input
         {...field}
         {...props}
-        className={`print-input ${errorClass}`}
+        className={`print-input ${errorClass} ${classTajFont} `}
         style={{ width: inputWidth }}
         disabled={isReadOnly}
       />
       {meta.touched && meta.error && !isReadOnly ? (
-        <small className="error">{meta.error}</small>
+        <small className={`error ${classTajFont}`}>{meta.error}</small>
       ) : null}
     </div>
   );
