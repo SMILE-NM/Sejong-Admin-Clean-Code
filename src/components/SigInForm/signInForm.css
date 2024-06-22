@@ -8,14 +8,8 @@
   src: url('../../assets/fonts/Poppins-Medium.woff2') format('woff2');
 }
 
-html,
-body {
-  background-color: #f1f2f3;
-}
-
 .login-main {
-  height: 100vh;
-  background-color: #f1f2f3;
+  /* background-color: #f1f2f3; */
 }
 
 /***************** FORM *****************/
@@ -23,10 +17,9 @@ body {
   background-color: white;
   border: 0px solid rgb(0, 0, 0);
   margin: auto;
-
   margin: 8% 35%;
+  /* margin-top: 0; */
   border-radius: 30px;
-
   box-shadow: 0px 4px 35px 0px rgba(0, 0, 0, 0.08);
 }
 

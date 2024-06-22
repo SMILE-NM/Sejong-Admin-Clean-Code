@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { selectAllStudents } from '../../../components/Navbar/SearchPanel/SearchPanelSlice';
-import { setSelectedCardId } from '../../CardList/Card/cardSlice';
+import { selectAllStudents, setSelectedId } from '../../api/studentSlice';
 
 import { Button, Form, Stack, Col, Container, Row } from 'react-bootstrap';
 import { BsPrinter } from 'react-icons/bs';
@@ -32,7 +31,7 @@ function SearchPanel({ isReadOnly, setIsReadyOnly, handlePrint, resetValues }) {
       return (
         <li
           key={id}
-          onClick={() => dispatch(setSelectedCardId(id))}
+          onClick={() => dispatch(setSelectedId(id))}
           className="student-item"
         >
           {name_en + ' ' + last_name_en}
@@ -72,19 +71,21 @@ function SearchPanel({ isReadOnly, setIsReadyOnly, handlePrint, resetValues }) {
               }}
             />
           </Col>
-          <Col sm={4}>
-            <div
-              onClick={handlePrint}
-              className="add-pointer printer-icon d-flex"
-            >
-              <div>
-                <BsPrinter size={32} />
+          {isReadOnly && (
+            <Col sm={4}>
+              <div
+                onClick={handlePrint}
+                className="add-pointer printer-icon d-flex"
+              >
+                <div>
+                  <BsPrinter size={32} />
+                </div>
+                <span style={{ marginLeft: '8px', width: '250px' }}>
+                  Click to print
+                </span>
               </div>
-              <span style={{ marginLeft: '8px', width: '250px' }}>
-                Click to print
-              </span>
-            </div>
-          </Col>
+            </Col>
+          )}
         </Row>
       </Container>
     </div>

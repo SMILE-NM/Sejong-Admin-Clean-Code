@@ -1,12 +1,13 @@
 import { useSelector } from 'react-redux';
 import { useGetStudentsQuery } from '../api/apiSlice';
-import { selectFilteredStudents } from '../Navbar/SearchPanel/SearchPanelSlice';
+import { selectFilteredStudents } from '../api/studentSlice';
 
 import Spinner from '../Messages/Spinner';
 import Error from '../Messages/Error.gif';
 import Card from './Card/Card';
 import NotFound from '../../assets/images/not_Found.png';
-import './cadrList.css';
+
+import './cardList.css';
 
 const CardList = () => {
   const { isLoading, isError } = useGetStudentsQuery();

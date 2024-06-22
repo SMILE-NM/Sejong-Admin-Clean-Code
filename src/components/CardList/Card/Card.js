@@ -1,8 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-
-import { setSelectedCardId } from './cardSlice';
-import { getOption } from '../../Navbar/SearchPanel/SearchPanelSlice';
+import { getOption, setSelectedId } from '../../api/studentSlice';
 
 import imageUser from '../../../assets/images/Female.png';
 
@@ -68,7 +66,7 @@ const Card = ({
       <button
         className="btn-more"
         onClick={() => {
-          dispatch(setSelectedCardId(id));
+          dispatch(setSelectedId(id));
           navigate('/student');
         }}
       >

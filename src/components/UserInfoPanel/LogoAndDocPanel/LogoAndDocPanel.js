@@ -2,6 +2,7 @@ import { SejongLogo } from '../images';
 import Form from 'react-bootstrap/Form';
 import { BsFiletypePdf, BsBan } from 'react-icons/bs';
 import './logoAndPanel.css';
+import { Field } from 'formik';
 
 const LogoAndDocPanel = ({ isReadOnly }) => {
   return (
@@ -26,13 +27,21 @@ const Mode = ({ isReadOnly }) => {
     </div>
   ) : (
     <div>
-      <Form.Group controlId="passport_scan" className="mb-3">
+      <Form.Group className="mb-3">
         <Form.Label size={'sm'}>Passport Scan</Form.Label>
-        <Form.Control type="file" size={'sm'} name="passport_scan" />
+        <Field
+          name="passport_scan"
+          type="file"
+          className="form-control form-control-sm"
+        />
       </Form.Group>
-      <Form.Group controlId="checklist_scan" className="mb-3">
+      <Form.Group className="mb-3">
         <Form.Label>Checklist Scan</Form.Label>
-        <Form.Control type="file" size={'sm'} name="checklist_scan" />
+        <Field
+          name="checklist_scan"
+          type="file"
+          className="form-control form-control-sm"
+        />
       </Form.Group>
     </div>
   );

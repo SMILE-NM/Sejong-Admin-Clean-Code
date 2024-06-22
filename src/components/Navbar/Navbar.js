@@ -1,9 +1,13 @@
-import sejongLogo from '../../assets/images/logo.png';
-import './navbar.css';
+import SearchPanel from './SearchPanel/SearchPanel';
+import SettingsModal from './SettingsModal/SettingsModal';
+
 import Form from 'react-bootstrap/Form';
 import { DropdownButton, Dropdown } from 'react-bootstrap';
+
 import { BsGear } from 'react-icons/bs';
-import SearchPanel from './SearchPanel/SearchPanel';
+
+import sejongLogo from '../../assets/images/logo.png';
+import './navbar.css';
 
 const Navbar = () => {
   return (
@@ -22,13 +26,16 @@ const Navbar = () => {
             title={<BsGear size={24} />}
             variant="light"
           >
-            <Dropdown.Item href="#/action-1">
+            <Dropdown.Item href="#/action-1" className="mb-2">
               <Form.Check
                 type="switch"
                 id="switch-button"
                 label="registration"
                 className="switch-input"
               />
+            </Dropdown.Item>
+            <Dropdown.Item href="#/action-2" className="mb-2">
+              <SettingsModal />
             </Dropdown.Item>
           </DropdownButton>
         </div>

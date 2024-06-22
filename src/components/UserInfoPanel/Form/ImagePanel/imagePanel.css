@@ -1,0 +1,13 @@
+.image-panel {
+  display: flex;
+}
+
+.image-panel input[type='file'] {
+  display: none;
+}
+
+.image-panel label {
+  margin: auto;
+  margin-top: 190px;
+  cursor: pointer;
+}

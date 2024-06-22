@@ -66,16 +66,17 @@ function StudentModal({
   };
 
   const handleUpdateStudent = async () => {
-    if (confirmationText === 'YES') {
-      await updateStudent({
-        id: studentId,
-        updatedStudent: studentData,
-      }).unwrap();
-    } else {
-      setErrorMessage(
-        'Incorrect confirm please enter YES for updating student',
-      );
-    }
+    // console.log(studentData);
+    // if (confirmationText === 'YES') {
+    //   await updateStudent({
+    //     id: studentId,
+    //     updatedStudent: studentData,
+    //   }).unwrap();
+    // } else {
+    //   setErrorMessage(
+    //     'Incorrect confirm please enter YES for updating student',
+    //   );
+    // }
 
     setSubmitting(false);
   };

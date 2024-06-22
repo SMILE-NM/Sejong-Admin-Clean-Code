@@ -1,8 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
-import {
-  setFilteredStudents,
-  setStudents,
-} from '../Navbar/SearchPanel/SearchPanelSlice';
+import { setFilteredStudents, setStudents } from './studentSlice.js';
 
 export const apiSlice = createApi({
   reducerPath: 'api',
@@ -10,7 +7,7 @@ export const apiSlice = createApi({
     baseUrl: 'http://localhost:3001',
     // credentials: 'include',
   }),
-  tagTypes: ['Students'],
+  tagTypes: ['Students', 'Database'],
   endpoints: (builder) => ({
     getStudents: builder.query({
       query: () => '/students',
@@ -48,6 +45,26 @@ export const apiSlice = createApi({
       }),
       invalidatesTags: ['Students'],
     }),
+    getDatabases: builder.query({
+      query: () => '/databases',
+      providesTags: ['Database'],
+    }),
+    createDatabase: builder.mutation({
+      query: (newDataBase) => ({
+        url: '/databases',
+        method: 'POST',
+        body: newDataBase,
+      }),
+      invalidatesTags: ['Database'],
+    }),
+    selectDatabase: builder.mutation({
+      query: (selectedDb) => ({
+        url: '/selectDb',
+        method: 'POST',
+        body: selectedDb,
+      }),
+      invalidatesTags: ['Database', 'Student'],
+    }),
   }),
 });
 
@@ -56,4 +73,7 @@ export const {
   useCreateStudentMutation,
   useDeleteStudentMutation,
   useUpdateStudentMutation,
+  useGetDatabasesQuery,
+  useCreateDatabaseMutation,
+  useSelectDatabaseMutation,
 } = apiSlice;

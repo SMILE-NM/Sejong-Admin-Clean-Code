@@ -1,7 +1,8 @@
+import { useState } from 'react';
 import { useGetStudentsQuery } from '../../api/apiSlice';
 import { useDispatch } from 'react-redux';
-import { setFilteredStudents, setOption } from './SearchPanelSlice';
-import { useState } from 'react';
+
+import { setFilteredStudents, setOption } from '../../api/studentSlice';
 
 const SearchPanel = () => {
   const [selectedValue, setSelectedValue] = useState('name_en');

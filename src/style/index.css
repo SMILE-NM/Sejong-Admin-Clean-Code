@@ -15,5 +15,9 @@
 
 html,
 body {
-  font-family: Poppins !important;
+  font-family: Poppins, sans-serif !important;
+}
+
+a:active {
+  background-color: gray !important ;
 }

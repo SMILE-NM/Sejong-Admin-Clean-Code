@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
+
 import { useDispatch } from 'react-redux';
+
 import { loginSuccess } from './authSlice';
 import { useNavigate } from 'react-router-dom';
 
@@ -18,6 +20,7 @@ const SignInForm = () => {
 
   return (
     <div className="login-main">
+      <div className="mb-5" />
       <Formik
         initialValues={{ username: '', password: '' }}
         validationSchema={Yup.object({
@@ -45,7 +48,7 @@ const SignInForm = () => {
           <Form className="Main-form">
             <div className="First">
               <div className="Welcome">
-                <h2 id="wel">Welcome to Sejong</h2>
+                <h3 id="wel">Welcome to Sejong</h3>
               </div>
               <div className="Sign">
                 <img

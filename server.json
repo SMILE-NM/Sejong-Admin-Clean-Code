@@ -19,7 +19,10 @@
       "postal_code": "123456",
       "time": "10:00",
       "address": "123 Main St, Seoul",
-      "money": ""
+      "money": "",
+      "passport_scan": "",
+      "checklist_scan": "",
+      "image": ""
     },
     {
       "id": "3",
@@ -220,6 +223,28 @@
       "label": "Земля",
       "className": "btn-secondary",
       "id": "0bb7"
+    }
+  ],
+  "databases": [
+    {
+      "id": "1",
+      "name": "January_2024",
+      "active": false
+    },
+    {
+      "id": "2",
+      "name": "August_2024",
+      "active": false
+    },
+    {
+      "id": "3",
+      "name": "September_2025",
+      "active": true
+    },
+    {
+      "id": "f1cc25b0-7dca-4608-852c-bdcd71138833",
+      "name": "May_2026",
+      "active": false
     }
   ]
 }

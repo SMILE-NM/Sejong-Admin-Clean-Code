@@ -34,6 +34,9 @@ const MyInitialValues = {
   student_group: '',
   time: '',
   money: '',
+  passport_scan: '',
+  checklist_scan: '',
+  image: '',
 };
 
 const MyValidationSchema = Yup.object({

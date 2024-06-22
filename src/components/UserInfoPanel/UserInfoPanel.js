@@ -6,8 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { useReactToPrint } from 'react-to-print';
 import { Formik, Form as FormFormik } from 'formik';
 
-import { selectStudentById } from '../Navbar/SearchPanel/SearchPanelSlice';
-import { selectSelectedCardId } from '../CardList/Card/cardSlice';
+import { selectStudentById, selectSelectedId } from '../api/studentSlice';
 
 import MyModal from './Modal/MyModal';
 import SearchPanel from './SearchPanel/SearchPanel';
@@ -25,7 +24,7 @@ import MyForm from './Form/Form';
 const UserInfoPanel = () => {
   const navigate = useNavigate();
 
-  const studentId = useSelector(selectSelectedCardId);
+  const studentId = useSelector(selectSelectedId);
   const student = useSelector((state) => selectStudentById(state, studentId));
   const [initialValues, setInitialValues] = useState(MyInitialValues);
 
@@ -48,6 +47,7 @@ const UserInfoPanel = () => {
 
   const handleSubmit = async (values, actions) => {
     actions.setSubmitting(true);
+    console.log(values);
     const errors = await actions.validateForm();
     const isValid = Object.keys(errors).length === 0;
     if (isValid) {

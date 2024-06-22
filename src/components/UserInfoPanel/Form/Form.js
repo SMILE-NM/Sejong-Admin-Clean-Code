@@ -1,13 +1,13 @@
 import LogoAndDocPanel from '../LogoAndDocPanel/LogoAndDocPanel';
 import MyTextInput from '../Inputs/MyTextInput';
 import MySelectInput from '../Inputs/MySelectInput';
+import ImagePanel from './ImagePanel/ImagePanel';
 
 import { Button } from 'react-bootstrap';
 import { BsTrash3Fill } from 'react-icons/bs';
 
+import { US, KR, TJ } from '../images/index';
 import { placeholders } from '../configs';
-
-import { US, KR, TJ, UserImage } from '../images/index';
 
 const MyForm = ({
   isReadOnly,
@@ -37,7 +37,8 @@ const MyForm = ({
       <LogoAndDocPanel isReadOnly={isReadOnly} />
 
       <div className="d-flex align-items-center circle-img-main">
-        <img src={UserImage} alt="" className="circle-img-printer" />
+        <ImagePanel isReadOnly={isReadOnly} />
+        {/* <input type="file" name="image" className="no-print" /> */}
       </div>
       <div>
         <div className="d-flex align-items-center margin-div">
