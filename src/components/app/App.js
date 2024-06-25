@@ -11,6 +11,7 @@ import {
 import Spinner from '../Messages/Spinner';
 
 import './app.css';
+import { useGetStudentsQuery } from '../api/apiSlice';
 
 const LoginPage = lazy(() => import('../pages/LoginPage'));
 const AdminPage = lazy(() => import('../pages/AdminPage'));
@@ -23,6 +24,7 @@ const PrivateRoute = ({ children }) => {
 };
 
 const App = () => {
+  useGetStudentsQuery();
   return (
     <div className="app">
       <Suspense
